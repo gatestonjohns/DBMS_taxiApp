@@ -1,12 +1,12 @@
 ### DBMS Taxilytics App
 
-##This data is stored in an OracleDB, queried in NodeJS, passed in using EJS and formatted as a chart using ChartJS.
+## This data is stored in an OracleDB, queried in NodeJS, passed in using EJS and formatted as a chart using ChartJS.
 
-#\#NodeJS
-#\#ExpressAppPkg
-#\#OracleSQL
-#\#OracleDBpkg
-#\#EJS
+# \#NodeJS
+# \#ExpressAppPkg
+# \#OracleSQL
+# \#OracleDBpkg
+# \#EJS
 
 This app uses a sampling of 7.8 million rows of taxicab trip data from the years of 2018-2020. 
 This data was downloaded from https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page . 
@@ -19,6 +19,7 @@ Excuse the app's appearance, I did not want to spend the unecessary time learnin
 For this reason, some sample screenshots are posted below:
 
 Home page:
+
 ![image](https://user-images.githubusercontent.com/68303855/166615705-fd1c38a6-1df5-473e-9aa6-0845038c2767.png)
 
 Taxi Drivers page (example query):
