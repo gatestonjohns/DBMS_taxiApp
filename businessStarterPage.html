@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Query Selection</title>
+</head>
+<body>
+
+    <h1 id="dataPrompt">Please select your data parameters below...</h1>
+    <form method="get">
+        <label for="query">Choose a query to analyze:</label>
+
+        <div id="querySelectDiv">
+            <select name="query" id="query">
+                <option value="tripTimeLength">How does the average trip length vary over the year?</option>
+                <option value="overallCostWithInflation">How have taxi rates changed in value (with respect to inflation)?</option>
+                <option value="taxiTravelSpeed">What is the average speed of a taxi during a service trip?</option>
+            </select>
+        </div>
+
+        <div id="timeDomSelectDiv" class="radioButtons">
+            <input type="radio" id="day" name="timeDomain" value="day">
+            <label for="day">Day</label><br>
+            <input type="radio" id="month" name="timeDomain" value="month" checked>
+            <label for="month">Month</label><br>
+        </div>
+
+        <input type="submit" value="Show Data" />
+    </form>
+</body>
+</html>

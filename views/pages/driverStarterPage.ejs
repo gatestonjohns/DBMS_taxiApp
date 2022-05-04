@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Data Examiner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+</head>
+<body>
+    
+        
+        <div class="businessData">
+            <h2 id="dataPrompt" style="text-align: left; font-size: 30px; color: white;">Please select your data parameters below</h2>
+            <form method="get">
+                <label for="query">Choose a query to analyze:</label>
+
+                <div class="container">
+                    <div id="querySelectDivData">
+                        <select name="query" id="query">
+                            <option value="optimalTimeToDrive">When is the optimal time to be a part-time taxi driver during the year?</option>
+                            <option value="tipsPerMile">What are the average amount of tips per person per mile?</option>
+                        </select>
+                    </div>
+
+                    <div id="timeDomSelectDivData" class="radioButtons">
+                        <input type="radio" id="day" name="timeDomain" value="day">
+                        <label for="day" style="font-size: 15px; color: black;">Day</label>
+                        <input type="radio" id="month" name="timeDomain" value="month">
+                        <label for="month" style="font-size: 15px; color: black;">Month</label>
+                    </div>
+
+                    <div id="showData">
+                        <input type="submit" value="Show Data" style="left: 100px; top: 100px;" />
+                    </div>
+                </div>
+
+            </form>
+        
+        <div id="dataHolder">
+
+
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            <script>
+                var xLabel = <%-JSON.stringify(xAxis) %>;
+                var yVals = <%-JSON.stringify(yVals) %>;
+
+                new Chart("myChart", {
+                    type: "line",
+                    data: {
+                        labels: xLabel,
+                        datasets: [{
+                            data: yVals,
+                            borderColor: "red",
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: <%-JSON.stringify(title) %>,
+                            fontSize: 24
+                        }
+                    }
+                });
+            </script>
+        </div>
+        <a id="abtBtn1" class="btn" href="/" style="text-align: center; top: 30px; left: 1150px; width: 110px; height: 20px; background: rgb(0,0,0,0.5); color: white">Back to Home</a>
+    </div>
+
+</body>
+</html>

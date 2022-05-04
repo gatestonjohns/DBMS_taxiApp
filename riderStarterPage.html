@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Query Selection</title>
+</head>
+<body>
+    <h1 id="dataPrompt">Please select your data parameters below...</h1>
+    <form method="get">
+        <label for="query">Choose a query to analyze:</label>
+
+        <select name="query" id="query">
+            <option value="loneRidersPercentage">What percent of rides are single people?</option>
+            <option value="percentGroupRides">What percent of rides are groups (npassengers >= 3) ?</option>
+        </select>
+
+        <input type="radio" id="day" name="timeDomain" value="day">
+        <label for="day">Day</label><br>
+        <input type="radio" id="month" name="timeDomain" value="month">
+        <label for="month">Month</label><br>
+
+        <input type="submit" value="Show Data" />
+    </form>
+</body>
+</html>
